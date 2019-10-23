@@ -1,4 +1,4 @@
-# LongDB_2
+# Jupyter_connect_longDB
 this is a python jupyter which can connect longdb
 ```bash
 docker-compose up -d
