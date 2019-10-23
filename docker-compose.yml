@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  jupyter:
+    build:
+      context: ./dockerfile
+      dockerfile: dockerfile-jupyter
+    container_name: jupyter
+    hostname: jupyter
+    expose:
+      - "8888"
+    ports:
+      - "8888:8888"
+      - "5000:5000"
+    command: start-notebook.sh --NotebookApp.token=''
+    volumes:
+      - ./jupyter/jovyan/work:/home/jovyan/work
+      - ./jupyter/tmp/driver:/tmp/driver
