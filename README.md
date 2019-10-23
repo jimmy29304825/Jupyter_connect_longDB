@@ -8,11 +8,14 @@ after you start the container, you have to do the command below
 # Enter to jupyter's container
 sudo docker exec -it line-chat-bot-jupyter bash
 
-# Download ODBC package
+# Copy data from /tmp/driver
+cp /tmp/driver/splice_odbc_linux64-2.7.62.0.tar.gz /tmp
+
+# or Download yourself
 cd /tmp; wget https://splice-releases.s3.amazonaws.com/odbc-driver/Linux64/splice_odbc_linux64-2.7.62.0.tar.gz
 
 # Untar file
-tar -zxvf splice_odbc_linux64-2.7.62.0.tar.gz
+cd /tmp; tar -zxvf splice_odbc_linux64-2.7.62.0.tar.gz
 
 # Install package
 cd splice_odbc_linux64-2.7.62.0; ./install.sh
