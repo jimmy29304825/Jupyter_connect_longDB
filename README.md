@@ -6,7 +6,7 @@ docker-compose up -d
 after you start the container, you have to do the command below
 ```bash
 # Enter to jupyter's container
-sudo docker exec -it line-chat-bot-jupyter bash
+sudo docker exec -it jupyter bash
 
 # Copy data from /tmp/driver
 cp /tmp/driver/splice_odbc_linux64-2.7.62.0.tar.gz /tmp
